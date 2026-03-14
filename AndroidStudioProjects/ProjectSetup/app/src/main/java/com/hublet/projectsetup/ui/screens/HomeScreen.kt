@@ -15,10 +15,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import com.hublet.projectsetup.ui.viewmodel.HomeViewModel
 
 @Composable
 fun HomeScreen(onLoginClicked: ()-> Unit,
-               onRegisterClicked: ()-> Unit){
+               onRegisterClicked: ()-> Unit,
+               viewModel: HomeViewModel = hiltViewModel()){
     Box(modifier = Modifier.background(Color.White)){
         Column(modifier = Modifier.fillMaxSize()
             .padding(15.dp)

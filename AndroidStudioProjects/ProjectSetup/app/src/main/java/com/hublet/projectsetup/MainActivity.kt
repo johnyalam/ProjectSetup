@@ -17,7 +17,9 @@ import com.hublet.projectsetup.ui.screens.LoginScreen
 import com.hublet.projectsetup.ui.screens.RegistrationScreen
 import com.hublet.projectsetup.ui.screens.navigation.NavigationStack
 import com.hublet.projectsetup.ui.theme.ProjectSetupTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
