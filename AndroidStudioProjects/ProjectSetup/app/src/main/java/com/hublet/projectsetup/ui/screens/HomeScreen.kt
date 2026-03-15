@@ -21,6 +21,7 @@ import com.hublet.projectsetup.ui.viewmodel.HomeViewModel
 @Composable
 fun HomeScreen(onLoginClicked: ()-> Unit,
                onRegisterClicked: ()-> Unit,
+               onUserListClicked: ()-> Unit,
                viewModel: HomeViewModel = hiltViewModel()){
     Box(modifier = Modifier.background(Color.White)){
         Column(modifier = Modifier.fillMaxSize()
@@ -43,6 +44,13 @@ fun HomeScreen(onLoginClicked: ()-> Unit,
                     onRegisterClicked()
                 }) {
                     Text(text = "Register")
+                }
+
+                Button(onClick = {
+                    // navigate to registration screen
+                    onUserListClicked()
+                }) {
+                    Text(text = "User List")
                 }
             }
             Spacer(modifier = Modifier.weight(1f))
